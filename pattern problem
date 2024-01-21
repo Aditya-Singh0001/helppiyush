@@ -1,0 +1,57 @@
+#include<stdio.h>
+int main(){
+    int n,check1,check2;
+    scanf("%d",&n);
+    check1=n+1;
+    check2=1;
+    for(int i=1;i<=n+1;i++){
+        for(int j=1;j<=n+1;j++){
+            if(j<check1)
+            printf(" ");
+            else{
+                if((i+j)%2==0)
+                printf("*");
+                else
+                printf("x");
+            }
+            
+        }
+        printf("\n");
+        check1--;
+    }
+    if(n%2==1){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n+1;j++){
+            if(j<=check2)
+            printf(" ");
+            else{
+                if((i+j)%2==0)
+                printf("*");
+                else
+                printf("x");
+            }
+            
+        }
+        printf("\n");
+        check2++;
+    }
+    }
+    if(n%2==0){
+    for(int i=0;i<n;i++){
+        for(int j=1;j<=n+1;j++){
+            if(j<=check2)
+            printf(" ");
+            else{
+                if((i+j)%2==0)
+                printf("*");
+                else
+                printf("x");
+            }
+            
+        }
+        printf("\n");
+        check2++;
+    }
+    }
+	return 0;
+}
